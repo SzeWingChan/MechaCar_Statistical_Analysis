@@ -36,3 +36,18 @@ legend("topleft", c("Lot 1","Lot 2", "Lot 3"), fill=c("red", "blue", "purple"))
 #plot(SC_lot1)
 #plot(SC_lot2)
 #plot(SC_lot3)
+
+
+#Deliverable 3: T-Tests on Suspension Coils
+#Use t.test() to determine if the PSI across all manufacturing lots is statistically different from the population mean of 1,500 pounds per square inch
+t.test(SC_Table$PSI, mu=1500)
+
+#Use subset() argument to determine if the PSI for each manufacturing lot is statistically different from the population mean of 1,500 pounds per square inch
+lot1 <-  subset(SC_Table, Manufacturing_Lot == "Lot1")
+t.test(lot1$PSI, mu=1500)
+
+lot2 <-  subset(SC_Table, Manufacturing_Lot == "Lot2")
+t.test(lot2$PSI, mu=1500)
+
+lot3 <-  subset(SC_Table, Manufacturing_Lot == "Lot3")
+t.test(lot3$PSI, mu=1500)
