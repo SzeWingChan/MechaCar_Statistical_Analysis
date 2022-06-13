@@ -39,6 +39,7 @@ legend("topleft", c("Lot 1","Lot 2", "Lot 3"), fill=c("red", "blue", "purple"))
 
 
 #Deliverable 3: T-Tests on Suspension Coils
+
 #Use t.test() to determine if the PSI across all manufacturing lots is statistically different from the population mean of 1,500 pounds per square inch
 t.test(SC_Table$PSI, mu=1500)
 
